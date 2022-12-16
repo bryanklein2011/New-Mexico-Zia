@@ -207,10 +207,10 @@ https://www.tooplate.com/view/2116-blugoon
                     <td>OS/Setter/Libero</td>
                   </tr>
                   <tr>
-                    <th scope="row"></th>
+                    <th scope="row">5'7"</th>
                     <td>Zachary </td>
                     <td>Hunt</td>
-                    <td></td>
+                    <td>Setter/Libero</td>
                   </tr>
                   </tbody>
                 </table>
@@ -363,7 +363,8 @@ https://www.tooplate.com/view/2116-blugoon
                           </li>
 
                           <li><i class="fa fa-phone mt-4 fa-2x"></i>
-                            <p>505-310-0047</p>
+                            <p>Please Text</p>
+                            <p>505-803-8994</p>
                           </li>
 
                           <li><i class="fa fa-envelope mt-4 fa-2x"></i>
@@ -389,55 +390,5 @@ https://www.tooplate.com/view/2116-blugoon
     <script src="zia/assets/js/owl-carousel.js"></script>
     <script src="zia/assets/js/lightbox.js"></script>
     <script src="zia/assets/js/custom.js"></script>
-    <script>
-      //according to loftblog tut
-      $(".main-menu li:first").addClass("active");
-
-      var showSection = function showSection(section, isAnimate) {
-        var direction = section.replace(/#/, ""),
-          reqSection = $(".section").filter(
-            '[data-section="' + direction + '"]'
-          ),
-          reqSectionPos = reqSection.offset().top - 0;
-
-        if (isAnimate) {
-          $("body, html").animate(
-            {
-              scrollTop: reqSectionPos
-            },
-            800
-          );
-        } else {
-          $("body, html").scrollTop(reqSectionPos);
-        }
-      };
-
-      var checkSection = function checkSection() {
-        $(".section").each(function() {
-          var $this = $(this),
-            topEdge = $this.offset().top - 80,
-            bottomEdge = topEdge + $this.height(),
-            wScroll = $(window).scrollTop();
-          if (topEdge < wScroll && bottomEdge > wScroll) {
-            var currentId = $this.data("section"),
-              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-            reqLink
-              .closest("li")
-              .addClass("active")
-              .siblings()
-              .removeClass("active");
-          }
-        });
-      };
-
-      $(".main-menu").on("click", "a", function(e) {
-        e.preventDefault();
-        showSection($(this).attr("href"), true);
-      });
-
-      $(window).scroll(function() {
-        checkSection();
-      });
-    </script>
   </body>
 </html>
